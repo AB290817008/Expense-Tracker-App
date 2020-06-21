@@ -9,8 +9,7 @@ import {GlobalContext} from '../Context/GlobalState';
 export const AddTransaction = () => {
    
     const {addTransaction} = useContext(GlobalContext);
-
-
+    
     const onSubmit = e => {
         e.preventDefault();
 
@@ -39,13 +38,13 @@ export const AddTransaction = () => {
             <h3>Add new transaction</h3>
             <form onSubmit={onSubmit}>
                 <div className="form-control">
-                    <label htmlFor="text">Details</label>
+                    <label htmlFor="text"><span className="details">Details</span></label>
                     <input type="text" id="text" placeholder="Enter text..." value={text} onChange={(e) => setText(e.target.value)}/>
                 </div>
                 <div className="form-control">
-                    <label htmlFor="amount">
+                    <label htmlFor="amount"><span className="amount">
                     Amount <br />
-                    (negative - expense, positive + income)</label>
+                    (negative - expense, positive + income)</span></label>
                 
                     <input type="number" id="amount" placeholder="Enter amount..." value={amount} onChange={(e) => setAmount(e.target.value)}/>
                 </div>
