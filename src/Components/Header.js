@@ -4,7 +4,7 @@ export const Header = () => {
     return (
         <div>
             
-            <h1>Simple Expense Tracker App By Arsal</h1>    
+            <h1>Simple Expense Tracker App</h1>    
         </div>
     )
 }
